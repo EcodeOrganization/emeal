@@ -1,6 +1,6 @@
 <template>
     <footer v-show="isShow">
-        <router-link to="/login">
+        <router-link to="/menulist">
             <span class="icon-menu"></span>
             菜单
         </router-link>

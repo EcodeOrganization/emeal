@@ -1,7 +1,7 @@
 <template>
     <header>
         <img src="static/img/logo.png" alt="">
-        <span>{{user.name}}</span>
+        <span v-if="user">{{user.name}}</span>
     </header>
 </template>
 

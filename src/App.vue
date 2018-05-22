@@ -17,9 +17,9 @@ export default {
     footPage
   },
   created() {
-    setTimeout(() => {
-      eventBus.$emit('user', {name: 'Ecode'})
-    }, 500)
+    // setTimeout(() => {
+    //   eventBus.$emit('user', {name: 'Ecode'})
+    // }, 500)
   }
 }
 </script>

@@ -1,0 +1,48 @@
+.login{
+    .cover{
+        display: block;
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 50%;
+        margin: 1rem auto;
+    }
+    .line{
+        width: 80%;
+        margin: 0.5rem auto;
+        height: 2rem;
+        line-height: 2rem;
+        @include border_bottom_half($gray);
+        input{
+            position: relative;
+            z-index: 9;
+            top: -0.2rem;
+            width: 75%;
+        }
+        span{
+            color: #666;
+            &:last-child{
+                position: absolute;
+                z-index: 9;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .btn-large-red{
+        width: 80%;
+        margin: 1.5rem auto 0;
+        text-align: center;
+        height: 2rem;
+        line-height: 2rem;
+        background: $red;
+        color: #fff;
+        border-radius: 0.2rem;
+    }
+    .jump{
+        margin: 1rem 10%;
+        font-size: 0.7rem;
+        color: $gray;
+    }
+}

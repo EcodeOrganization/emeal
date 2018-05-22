@@ -7,7 +7,8 @@ import axios from 'axios'
 
 Vue.prototype.$http = axios
 // Vue.prototype.resource = 'localhost:9000'
-Vue.prototype.resource = 'http://192.168.1.105:9000'
+// Vue.prototype.resource = 'http://192.168.1.105:9000'
+Vue.prototype.resource = 'http://172.30.67.141:9000'
 
 Vue.config.productionTip = false
 import 'assets/style.css'
@@ -17,6 +18,17 @@ import 'src/sass/style.scss'
 import toast from 'src/base/toast'
 Vue.prototype.$toast = toast
 
+// 全局mixin
+Vue.mixin({
+  data() {
+    return{
+      user: {}
+    }
+  },
+  created() {
+    this.user = JSON.parse(sessionStorage.getItem('user'))
+  }
+})
 
 // 设置eventBus
 window.eventBus = new Vue()
