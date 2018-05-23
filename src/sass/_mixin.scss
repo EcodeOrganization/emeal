@@ -19,7 +19,7 @@
   @include clearfix(false);
 }
 
-@mixin border_half($color: $borderColor, $radius: 0){
+@mixin border_half($color: $w-borderColor, $radius: 0){
   position: relative;
   &:after{
     content: '';
@@ -31,14 +31,14 @@
     box-sizing: border-box;
     border: 1px solid $color;
     border-radius: $radius;
-    -webkit-transform: scale(0.5,0.5);
     transform: scale(0.5,0.5);
+    -webkit-transform: scale(0.5,0.5);
     transform-origin: top left;
     -webkit-transform-origin: top left;
   }
 }
 
-@mixin border_bottom_half($color: $borderColor){
+@mixin border_bottom_half($color: $w-borderColor){
   position: relative;
   &:after{
     content: '';
@@ -49,13 +49,13 @@
     left: 0;
     box-sizing: border-box;
     border-bottom: 1px solid $color;
-    -webkit-transform: scale(0.5,0.5);
     transform: scale(0.5,0.5);
+    -webkit-transform: scale(0.5,0.5);
     transform-origin: top left;
     -webkit-transform-origin: top left;
   }
 }
-@mixin border_top_half($color: $borderColor){
+@mixin border_top_half($color: $w-borderColor){
   position: relative;
   &:after{
     content: '';
@@ -66,13 +66,13 @@
     left: 0;
     box-sizing: border-box;
     border-top: 1px solid $color;
-    -webkit-transform: scale(0.5,0.5);
     transform: scale(0.5,0.5);
+    -webkit-transform: scale(0.5,0.5);
     transform-origin: top left;
     -webkit-transform-origin: top left;
   }
 }
-@mixin border_left_half($color: $borderColor){
+@mixin border_left_half($color: $w-borderColor){
   position: relative;
   &:after{
     content: '';
@@ -83,13 +83,13 @@
     left: 0;
     box-sizing: border-box;
     border-left: 1px solid $color;
-    -webkit-transform: scale(0.5,0.5);
     transform: scale(0.5,0.5);
+    -webkit-transform: scale(0.5,0.5);
     transform-origin: top left;
     -webkit-transform-origin: top left;
   }
 }
-@mixin border_right_half($color: $borderColor){
+@mixin border_right_half($color: $w-borderColor){
   position: relative;
   &:after{
     content: '';
@@ -100,8 +100,8 @@
     left: 0;
     box-sizing: border-box;
     border-right: 1px solid $color;
-    -webkit-transform: scale(0.5,0.5);
     transform: scale(0.5,0.5);
+    -webkit-transform: scale(0.5,0.5);
     transform-origin: top left;
     -webkit-transform-origin: top left;
   }

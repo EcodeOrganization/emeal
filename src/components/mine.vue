@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{msg}}
+    <router-view/>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'mine'
     }
   },
 }
