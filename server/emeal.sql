@@ -50,8 +50,7 @@ DROP TABLE IF EXISTS `menu`;
 CREATE TABLE `menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
-  `price` int(11) DEFAULT NULL,
-  `type_id` int(11) DEFAULT NULL,
+  `price` varchar(45) DEFAULT NULL,
   `descript` longtext,
   `picture` longtext,
   `createTime` varchar(45) DEFAULT NULL,
@@ -65,7 +64,7 @@ CREATE TABLE `menu` (
 
 LOCK TABLES `menu` WRITE;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
-INSERT INTO `menu` VALUES (1,'米饭',2,1,'优质东北大米','static/img/rice-img.jpg','2017-12-01 09:30'),(2,'宫保鸡丁',30,2,'北方宫保鸡丁，，绝对不甜，欢迎下次继续订购哈','static/img/jiding-img.jpg','2017-11-15 10:30'),(3,'千叶豆腐',25,3,'千页豆腐，味道鲜美','static/img/千页豆腐-img.jpg','2017-10-05 16:30'),(4,'烤鱼',130,4,'鱼类经过烤制之后然后进行烹饪的一种方法','static/img/烤鱼-img.jpg','2017-02-15 19:30'),(5,'美容养颜养生八宝粥',199,5,'八宝粥内种类杂粮对人体需要的各种元素有很好的补充作用','static/img/八宝粥自制-img.jpg','2017-12-05 07:30'),(6,'安然盒饭',300,6,'安然自制盒饭，色香味俱全','static/img/安然盒饭-img.jpg','2017-11-23 09:30'),(7,'七夕虐狗',200,1,'七夕狂欢','static/menucover/1512999985554qixi.png','2017-12-11 21:47:35'),(8,'天空之城',50,1,'想象的星空','static/menucover/1513000442922想象.jpg','2017-12-11 21:54:50'),(9,'是的撒',1223,1,'213','static/menucover/1513000567786logo.jpg','2017-12-11 21:56:19'),(10,'剑姬',45,1,'圣斗士','static/menucover/1516533153180menu1.jpg','2017-12-11 22:00:45'),(11,'头像',15,1,'回眸','static/menucover/1513000900572null5c45cb615341b156.jpg','2017-12-11 22:04:03'),(13,'美妙的餐厅',60,1,'一起来进餐吧','static/menucover/1513007348072mmexport1512865225974.jpg','2017-12-11 23:49:34'),(14,'双肩包',100,1,'亲笔签名双肩包','static/menucover/1513236062448login.png','2017-12-13 20:43:21'),(15,'二次元',50,1,'我们不一样，每个人都有不同的境遇','static/menucover/1516628068566menu2.jpg','2018-01-22 21:35:03');
+INSERT INTO `menu` VALUES (1,'米饭','2','优质东北大米','static/img/rice-img.jpg','2017-12-01 09:30'),(2,'宫保鸡丁','30','北方宫保鸡丁，，绝对不甜，欢迎下次继续订购哈','static/img/jiding-img.jpg','2017-11-15 10:30'),(3,'千叶豆腐','25','千页豆腐，味道鲜美','static/img/千页豆腐-img.jpg','2017-10-05 16:30'),(4,'烤鱼','130','鱼类经过烤制之后然后进行烹饪的一种方法','static/img/烤鱼-img.jpg','2017-02-15 19:30'),(5,'美容养颜养生八宝粥','199','八宝粥内种类杂粮对人体需要的各种元素有很好的补充作用','static/img/八宝粥自制-img.jpg','2017-12-05 07:30'),(6,'安然盒饭','300','安然自制盒饭，色香味俱全','static/img/安然盒饭-img.jpg','2017-11-23 09:30'),(7,'七夕虐狗','200','七夕狂欢','static/menucover/1512999985554qixi.png','2017-12-11 21:47:35'),(8,'天空之城','50','想象的星空','static/menucover/1513000442922想象.jpg','2017-12-11 21:54:50'),(9,'是的撒','1223','213','static/menucover/1513000567786logo.jpg','2017-12-11 21:56:19'),(10,'剑姬','45','圣斗士','static/menucover/1516533153180menu1.jpg','2017-12-11 22:00:45'),(11,'头像','15','回眸','static/menucover/1513000900572null5c45cb615341b156.jpg','2017-12-11 22:04:03'),(13,'美妙的餐厅','60','一起来进餐吧','static/menucover/1513007348072mmexport1512865225974.jpg','2017-12-11 23:49:34'),(14,'双肩包','100','亲笔签名双肩包','static/menucover/1513236062448login.png','2017-12-13 20:43:21'),(15,'二次元','50','我们不一样，每个人都有不同的境遇','static/menucover/1516628068566menu2.jpg','2018-01-22 21:35:03');
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -225,7 +224,7 @@ CREATE TABLE `user` (
   `avatar` longtext,
   PRIMARY KEY (`id`),
   UNIQUE KEY `phone_UNIQUE` (`phone`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -234,7 +233,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'18063229116','root','123','商户',20,NULL,NULL,NULL),(2,'18063229112','Ecode','123','客户',20,NULL,NULL,NULL),(11,'18063229111','nini','123','商户',NULL,NULL,NULL,NULL);
+INSERT INTO `user` VALUES (1,'18063229116','root','123','商户',20,NULL,NULL,NULL),(2,'18063229111','Ecode','123','客户',20,NULL,NULL,NULL),(3,'18063229112','nini','123','客户',NULL,NULL,NULL,NULL),(4,'1','18063229116','root','客户',NULL,NULL,NULL,NULL),(5,'18063229118','Uzi','123','客户',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -247,4 +246,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-03 17:45:32
+-- Dump completed on 2018-05-25 19:12:47
