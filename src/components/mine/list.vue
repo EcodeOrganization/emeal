@@ -41,6 +41,9 @@ export default {
         content: '确定要退出账号吗？',
         onOk: () => {
           console.log('ok')
+          sessionStorage.clear()
+          eventBus.$emit('user', '')
+          this.$router.push('/login')
         },
       })
     }

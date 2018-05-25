@@ -7,6 +7,7 @@ header{
     background: #282828;
     color: #409EFF;
     text-align: right;
+    z-index: 9;
     img{
         width: 1.5rem;
         height: auto;
@@ -30,11 +31,13 @@ footer{
     background: #282828;
     padding: 0.25rem 0;
     display: flex;
+    display: -webkit-flex;
     text-align: center;
     font-size: 0.75rem;
     a{
         color: #909090;
         flex: 1;
+        -webkit-flex: 1;
         position: relative;
         span{
             display: block;

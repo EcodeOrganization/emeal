@@ -61,9 +61,7 @@ export default {
                     sessionStorage.setItem('user', JSON.stringify(data))
                     eventBus.$emit('user', data)
                     this.$toast('恭喜你登录成功，欢迎来到美味食府')
-                    setTimeout(() => {
-                       this.$router.push('/menulist')
-                    }, 500)
+                    this.$router.push('/menulist')
                 }).catch((err) => {
                     this.$toast(err.response.data.errMsg)
                 })
