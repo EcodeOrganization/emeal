@@ -17,7 +17,7 @@ export default {
   data() {
     return{
       searchVal: '',
-      activeName: '',
+      activeName: 'id',
       tabs: [{name: 'id', text: '默认'}, {name: 'price', text: '价格'}, {name: 'createTime', text: '上架时间'}]
     }
   },
