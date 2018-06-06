@@ -7,7 +7,7 @@ header{
     background: #282828;
     color: #409EFF;
     text-align: right;
-    z-index: 9;
+    z-index: 999;
     img{
         width: 1.5rem;
         height: auto;
@@ -34,6 +34,7 @@ footer{
     display: -webkit-flex;
     text-align: center;
     font-size: 0.75rem;
+    z-index: 999;
     a{
         color: #909090;
         flex: 1;

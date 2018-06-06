@@ -4,7 +4,7 @@
             <span class="icon-search"></span>
             <input type="text" v-model="currentValue" :placeholder="placeholder"  :autofocus="autofocus" @click="isShow = true">
         </div>
-        <a href="javascript:;" @click="cacel" v-show="isShow">取消</a>
+        <a href="javascript:;" @click="isShow = false, currentValue = ''" v-show="isShow">取消</a>
     </div>
 </template>
 
@@ -38,12 +38,6 @@ export default {
         value(val) {
             this.currentValue = val
         }
-    },
-    methods: {
-        cacel() {
-            this.currentValue = ''
-            this.isShow = false
-        }
     }
 }
 </script>
@@ -74,6 +68,7 @@ export default {
                 -webkit-flex: 1;
                 margin-left: 0.3rem;
                 height: 1.2rem;
+                font-size: 0.7rem;
             }
         }
         a{

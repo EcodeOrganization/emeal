@@ -21,9 +21,6 @@ export default {
             activeIndex: this.value
         }
     },
-    created() {
-        console.log(this.value)
-    },
     methods: {
         updateVal(val) {
             this.$emit('input', val)
