@@ -2,7 +2,7 @@
     <div class="search-box">
         <div class="search-content">
             <span class="icon-search"></span>
-            <input ref="input" type="text" @input="updateVal" :placeholder="placeholder">
+            <input type="text" v-model="currentValue" :placeholder="placeholder"  :autofocus="autofocus" @click="isShow = true">
         </div>
         <a href="javascript:;" @click="cacel" v-show="isShow">取消</a>
     </div>
@@ -11,24 +11,37 @@
 <script>
 export default {
     props: {
+        value: {
+            type: String,
+            default: ''
+        },
         placeholder: {
             type: String,
             default: '请输入'
+        },
+        autofocus: {
+            type: Boolean,
+            default: false
         }
     },
     data() {
         return{
-            isShow: false
+            currentValue: this.value,
+            isShow: this.value ? true : false
+        }
+    },
+    watch: {
+        currentValue(val) {
+            this.$emit('input', val)
+            this.isShow = val
+        },
+        value(val) {
+            this.currentValue = val
         }
     },
     methods: {
-        updateVal(e) {
-            this.$emit('input', e.target.value)
-            this.isShow = e.target.value
-        },
         cacel() {
-            this.$refs.input.value = ''
-            this.$emit('input', '')
+            this.currentValue = ''
             this.isShow = false
         }
     }

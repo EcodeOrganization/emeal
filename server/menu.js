@@ -23,8 +23,8 @@ router.get('/menu/list/:type/:order', (req, res) => {
 getSingleOneTable('/menu/info', '*', 'menu', {errMsg: '没有查到菜单详情'}, 'id')
 
 // 根据菜单名模糊查询菜单列表
-router.get('/menu/list/like', (req, res) => {
-	var sql = `select * from menu where name like "%${req.query.name}%" order by ${req.query.type} ${req.query.order}`
+router.get('/menu/list/like/:type/:order', (req, res) => {
+	var sql = `select * from menu where name like "%${req.query.name}%" order by ${req.params.type} ${req.params.order}`
 	pool.getConnection((err, connection) => {
 		connection.query(sql, (err, data) => {
 			if (err) {

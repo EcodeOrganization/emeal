@@ -72,7 +72,7 @@ export default {
             } else {
                 let form = Object.assign({}, this.form)
                 form.phone = phone
-                this.$http.post(`${this.resource}/user/add`, form).then(res => {
+                this.$http.post(`${this.resource}/user/add`, form).then(() => {
                    this.$toast('恭喜你注册成功，3秒后自动跳转到登录页面')
                    setTimeout(() => {
                        this.$router.push('/login')
