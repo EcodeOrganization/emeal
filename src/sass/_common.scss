@@ -31,14 +31,12 @@ footer{
     background: #282828;
     padding: 0.25rem 0;
     display: flex;
-    display: -webkit-flex;
     text-align: center;
     font-size: 0.75rem;
     z-index: 999;
     a{
         color: #909090;
         flex: 1;
-        -webkit-flex: 1;
         position: relative;
         span{
             display: block;

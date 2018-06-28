@@ -58,7 +58,7 @@ export default {
                 this.$toast('密码不能为空')
             } else {
                 this.$http.get(`${this.resource}/user/login`, {params: {phone: phone, password: this.password}}).then(({ data }) => {
-                    sessionStorage.setItem('user', JSON.stringify(data))
+                    localStorage.setItem('user', JSON.stringify(data))
                     eventBus.$emit('user', data)
                     this.$toast('恭喜你登录成功，欢迎来到美味食府')
                     this.$router.push('/menulist')

@@ -3,7 +3,7 @@
     <search-box v-model="searchVal" placeholder="请输入商品名" autofocus></search-box>
     <tab v-model="activeName" :tabs="tabs"></tab>
     <ul class="common-table">
-      <li v-for="item in listArr" :key="item.id">
+      <li v-for="item in listArr" :key="item.id" @click="jump(item.id)">
         <img :src="item.picture" alt="">
         <div>
           <p>{{item.name}}</p>
@@ -11,7 +11,7 @@
           <p>共销售{{item.total}}&nbsp;&nbsp;&nbsp;共{{item.rateAllNum}}条评价</p>
           <p>
             <span class="dollar">￥{{item.price}}</span>
-            <a href="javascript:;" class="num">
+            <a href="javascript:;" class="num" @click.stop>
               <i v-show="item.num > 0"></i>
               <span>1</span>
               <i></i>
@@ -63,6 +63,13 @@ export default {
       this.$http.get(`${this.resource}/menu/list/like/${this.activeName}/${this.order}`, {params: {name: this.searchVal}}).then(({ data }) => {
         this.listArr = data
       })
+    },
+    // 数据处理
+    dealArr(arr) {
+      
+    },
+    jump(id) {
+      this.$router.push({path: '/menudetail', query: {id: id}})
     }
   }
 }

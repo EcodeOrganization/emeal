@@ -3,7 +3,6 @@
         padding: 0.5rem 0;
         li{
             display: flex;
-            display: -webkit-flex;
             padding: 0.5rem;
             @include border_bottom_half(#dfdddd);
             img{
@@ -12,7 +11,6 @@
             }
             div{
                 flex: 1;
-                -webkit-flex: 1;
                 padding: 0 0.5rem;
                 p{
                     &:first-child{
@@ -44,7 +42,6 @@
                     right: 0;
                     top: 0;
                     display: flex;
-                    display: -webkit-flex;
                     align-items: center;
                     -webkit-align-items: center;
                     i{
@@ -57,14 +54,14 @@
                             box-sizing: border-box;
                             &:before{
                                 content: '';
-                                width: 0.5rem;
+                                width: 0.6rem;
                                 height: 1px;
                                 background: #00a0dc;
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
                                 margin-top: -0.5px;
-                                margin-left: -0.25rem;
+                                margin-left: -0.3rem;
                             }
                         }
                         &:last-child{
@@ -75,25 +72,27 @@
                             height: 1.2rem;
                             &:before{
                                 content: '';
-                                width: 0.5rem;
+                                width: 0.6rem;
                                 height: 1px;
                                 background: #fff;
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
                                 margin-top: -0.5px;
-                                margin-left: -0.25rem;
+                                margin-left: -0.3rem;
+                                border-radius: 1px;
                             }
                             &:after{
                                 content: '';
                                 width: 1px;
-                                height: 0.5rem;
+                                height: 0.6rem;
                                 background: #fff;
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
-                                margin-top: -0.25rem;
+                                margin-top: -0.3rem;
                                 margin-left: -0.5px;
+                                border-radius: 1px;
                             }
                         }
                     }
